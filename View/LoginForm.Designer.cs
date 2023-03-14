@@ -46,9 +46,11 @@ namespace ThiKyNangNghe
             this._OK.TabIndex = 0;
             this._OK.Text = "OK";
             this._OK.UseVisualStyleBackColor = true;
+            this._OK.Click += new System.EventHandler(this._OK_Click);
             // 
             // calcel
             // 
+            this.calcel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.calcel.Location = new System.Drawing.Point(391, 287);
             this.calcel.Name = "calcel";
             this.calcel.Size = new System.Drawing.Size(115, 35);
@@ -56,56 +58,58 @@ namespace ThiKyNangNghe
             this.calcel.Text = "CANCEL";
             this.calcel.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // labelSignin
             // 
             this.labelSignin.AutoSize = true;
             this.labelSignin.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.labelSignin.Location = new System.Drawing.Point(126, 58);
-            this.labelSignin.Name = "Signin";
+            this.labelSignin.Name = "labelSignin";
             this.labelSignin.Size = new System.Drawing.Size(301, 29);
             this.labelSignin.TabIndex = 0;
             this.labelSignin.Text = "Sign in to EM management";
-            this.labelSignin.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // labelUsername
             // 
-            
             this.labelUsername.AutoSize = true;
             this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.labelUsername.Location = new System.Drawing.Point(127, 127);
-            this.labelUsername.Name = "Username";
-            this.labelUsername.Size = new System.Drawing.Size(92, 22);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(97, 22);
             this.labelUsername.TabIndex = 2;
             this.labelUsername.Text = "Username:";
             // 
-            // label3
+            // labelPassword
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.labelPassword.Location = new System.Drawing.Point(129, 194);
-            this.labelPassword.Name = "Password";
-            this.labelPassword.Size = new System.Drawing.Size(88, 22);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(94, 22);
             this.labelPassword.TabIndex = 3;
             this.labelPassword.Text = "Password:";
             // 
-            // textBox1
+            // textBoxUsername
             // 
             this.textBoxUsername.Location = new System.Drawing.Point(233, 131);
-            this.textBoxUsername.Name = "username";
-            this.textBoxUsername.Size = new System.Drawing.Size(243, 34);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(243, 20);
             this.textBoxUsername.TabIndex = 4;
+            this.textBoxUsername.TextChanged += new System.EventHandler(this.textBoxUsername_TextChanged);
             // 
-            // textBox2
+            // textBoxPassword
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(233, 197);
-            this.textBoxPassword.Name = "password";
-            this.textBoxPassword.Size = new System.Drawing.Size(241, 36);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Size = new System.Drawing.Size(241, 20);
             this.textBoxPassword.TabIndex = 5;
             // 
             // LoginForm
             // 
+            this.AcceptButton = this._OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.calcel;
             this.ClientSize = new System.Drawing.Size(600, 400);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUsername);
@@ -114,7 +118,10 @@ namespace ThiKyNangNghe
             this.Controls.Add(this.labelSignin);
             this.Controls.Add(this.calcel);
             this.Controls.Add(this._OK);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.LoginForm_Paint);
