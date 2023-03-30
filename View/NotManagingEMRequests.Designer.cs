@@ -1,10 +1,10 @@
-﻿using ThiKyNangNghe.Models;
+﻿
 using System.Collections.Generic;
-using System.Windows.Forms;
+using ThiKyNangNghe.Models;
 
 namespace ThiKyNangNghe.View
 {
-    partial class ManagingEMRequests
+    partial class NotManagingEMRequests
     {
         /// <summary>
         /// Required designer variable.
@@ -32,60 +32,58 @@ namespace ThiKyNangNghe.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblTable = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSubmit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // lblTable
+            // 
+            this.lblTable.AutoSize = true;
+            this.lblTable.Location = new System.Drawing.Point(13, 13);
+            this.lblTable.Name = "lblTable";
+            this.lblTable.Size = new System.Drawing.Size(151, 13);
+            this.lblTable.TabIndex = 0;
+            this.lblTable.Text = "List of Assets Requesting EM :";
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 34);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 42);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 385);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Size = new System.Drawing.Size(772, 362);
+            this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
-            // 
-            // lblTable
-            // 
-            this.lblTable.AutoSize = true;
-            this.lblTable.Location = new System.Drawing.Point(13, 15);
-            this.lblTable.Name = "lblTable";
-            this.lblTable.Size = new System.Drawing.Size(89, 13);
-            this.lblTable.TabIndex = 1;
-            this.lblTable.Text = "Avaaable Assets:";
             // 
             // btnSubmit
             // 
             this.btnSubmit.AutoSize = true;
-            this.btnSubmit.Location = new System.Drawing.Point(13, 426);
+            this.btnSubmit.Location = new System.Drawing.Point(12, 415);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(206, 23);
+            this.btnSubmit.Size = new System.Drawing.Size(99, 23);
             this.btnSubmit.TabIndex = 2;
-            this.btnSubmit.Text = "Send Emergency Maintenance Request";
+            this.btnSubmit.Text = "Manage Request";
             this.btnSubmit.UseVisualStyleBackColor = true;
             // 
-            // ManagingEMRequests
+            // NotManagingEMRequests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 460);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.lblTable);
             this.Controls.Add(this.dataGridView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Controls.Add(this.lblTable);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ManagingEMRequests";
+            this.Name = "NotManagingEMRequests";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ManagingEMRequests";
-            this.Load += new System.EventHandler(this.ManagingEMRequests_Load);
+            this.Text = "NotManagingEMRequests";
+            this.Load += new System.EventHandler(this.NotManagingEMRequests_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -94,9 +92,9 @@ namespace ThiKyNangNghe.View
 
         #endregion
 
+        private System.Windows.Forms.Label lblTable;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private List<ListToManagerForm> data = new List<ListToManagerForm>();
-        private Label lblTable;
-        private Button btnSubmit;
+        private System.Windows.Forms.Button btnSubmit;
+        private List<ListToNotManagerForm> data = new List<ListToNotManagerForm>();
     }
 }
