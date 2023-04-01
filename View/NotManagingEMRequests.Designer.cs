@@ -69,6 +69,7 @@ namespace ThiKyNangNghe.View
             this.btnSubmit.TabIndex = 2;
             this.btnSubmit.Text = "Manage Request";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // NotManagingEMRequests
             // 

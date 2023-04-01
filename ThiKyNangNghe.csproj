@@ -76,6 +76,20 @@
     <Compile Include="Models\ListToManagerForm.cs" />
     <Compile Include="Models\ListToNotManagerForm.cs" />
     <Compile Include="Models\Model1.cs" />
+    <Compile Include="Models\Part.cs" />
+    <Compile Include="Models\Priority.cs" />
+    <Compile Include="View\EmergencyMaintenanceRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EmergencyMaintenanceRequest.Designer.cs">
+      <DependentUpon>EmergencyMaintenanceRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EmergencyMaintenanceRequestDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EmergencyMaintenanceRequestDetails.Designer.cs">
+      <DependentUpon>EmergencyMaintenanceRequestDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +110,12 @@
     <Compile Include="View\NotManagingEMRequests.Designer.cs">
       <DependentUpon>NotManagingEMRequests.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\EmergencyMaintenanceRequest.resx">
+      <DependentUpon>EmergencyMaintenanceRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EmergencyMaintenanceRequestDetails.resx">
+      <DependentUpon>EmergencyMaintenanceRequestDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>

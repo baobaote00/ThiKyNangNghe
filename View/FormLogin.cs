@@ -97,15 +97,15 @@ namespace ThiKyNangNghe.View
 
             if (employee.isAdmin.HasValue)
             {
-                form = new ManagingEMRequests(employee);
+                form = new ManagingEMRequests(this,employee);
             }
             else
             {
-                form = new NotManagingEMRequests(employee);
+                form = new NotManagingEMRequests(this,employee);
             }
 
-            form.Show();
             Hide();
+            form.Show();
         }
 
     }
